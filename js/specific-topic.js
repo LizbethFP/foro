@@ -16,7 +16,7 @@ const getTopic = function() {
 const showTopic = function(topics) {
   const existingTopic = topics.content;
   const author = topics.author_name;
-  $('#topic').append(`<h2>${existingTopic}</h2>  <br>        <p>By:</p><h2>${author}</h2>`);
+  $('#topic').append(`<div class="box-shadow mt-5"><h2 class="ml-4 bgr-ltr-spacing dark-ltr">${existingTopic}</h2> <br>        <p class="ml-4">By:</p><h2 class="ml-4 sm-ltr-spacing">${author}</h2></div>`);
 };
 
 /* Obtener las respuestas del topic id encontrado */
@@ -36,7 +36,7 @@ const showSpecificAnswers = function(response) {
     response.forEach(function(resp) {
       const answerToTopic = resp.content;
       const answerAuthor = resp.author_name;
-      $('#answer-div').append(`<h2>${answerToTopic}</h2><br><p>By:</p><h2>${answerAuthor}</h2><hr>`);
+      $('#answer-div').append(`<div class="box-shadow mt-5 mx-5"><h2 class="ml-4 bgr-ltr-spacing dark-ltr">${answerToTopic}</h2><br><p class="ml-4">By:</p><h2 class="ml-4 sm-ltr-spacing">${answerAuthor}</h2><hr></div>`);
     });
   }
 };
@@ -59,10 +59,10 @@ $('#post-answer').click(function() {
       content: newTopic,
       topic_id: topicId
     },
-    // cuando se logra hacer post exitosamente, se agrega los valores de la data al html
+    // Cuando se logra hacer post exitosamente, se agrega los valores de la data al html
     function(data, status) {
       let firstChild = $('#answer-div').eq(0);
-      $(firstChild).prepend(`<h2>${data.content}</h2><br><p>por:</p><h2>${data.author_name}</h2><hr>`);
+      $(firstChild).prepend(`<div class="box-shadow mt-5 mx-5"><h2 class="ml-4 bgr-ltr-spacing dark-ltr">${data.content}</h2><br><p>By:</p><h2 class="ml-4 sm-ltr-spacing">${data.author_name}</h2><hr></div>`);
       $('#author').val('');
       $('#message').val('');
     });
