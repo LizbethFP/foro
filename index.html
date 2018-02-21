@@ -50,13 +50,34 @@
 
     <main>
       <section>
-        <h1 class="text-center font-weight-bold my-4">Cool Forum</h1>
-
-        <button data-toggle="modal" data-target="#exampleModal" id="createtopic-btn">Create topic</button>
+        <div class="container-fluid">
+          <div class="row">
+            <h1 class="col-10 offset-1 col-md-4 offset-md-4 col-lg-4 offset-lg-4 col-xl-3 offset-xl-5 font-weight-bold my-4 dark-ltr">Cool Forum</h1>
+          </div>
+          <div class="row my-5">
+            <div class="col-6 offset-3 col-md-3 offset-md-5 col-lg-3 offset-lg-5 col-xl-3 offset-xl-5">
+              <button data-toggle="modal" data-target="#exampleModal" class="btn-style createtopic" id="createtopic-btn">Create topic</button>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section >
+      <section class="container-fluid mt-5">
         <div class="" id="all-topics-container">
+          <!-- <div class="row">
+            <div class="col-6 offset-3 box-shadow">
+                <h2 class="col-2 offset-5 font-weight-bold bgr-ltr-spacing">
+                <a class="jade-ltr" href="views/specific-topic.html?topic_id=${id}">Topic</a>
+              </h2>
+              <p class="col-2 offset-5 mt-3 sm-ltr-spacing dark-ltr">By:
+                <span class="ml-2 sm-ltr-spacing dark-ltr">emmanuel</span>
+              </p>
+              <p class="col-2 offset-5 sm-ltr-spacing dark-ltr">Answers:
+                <span class="ml-2 sm-ltr-spacing dark-ltr">3</span>
+              </p>
+            </div>
+          </div> -->
+                  
 
         </div>
 
@@ -73,20 +94,20 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Create a new topic</h5>
+            <h5 class="modal-title text-center font-weight-bold bgr-ltr-spacing dark-ltr" id="exampleModalLabel">Create a new topic</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <p>por:</p>
-            <input type="text" id="user-name">
-            <p>mensaje:</p>
-            <input type="text" id="user-message">
+            <p class="text-capitalize font-weight-light sm-ltr-spacing dark-ltr">by:</p>
+            <input type="text" class="w-100 p-2" id="user-name">
+            <p class="text-capitalize mt-3 font-weight-light sm-ltr-spacing dark-ltr">message:</p>
+            <input type="text" class="w-100 p-2" id="user-message">
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="save-topic">Save changes</button>
+            <button type="button" class="btn btn-secondary sm-ltr-spacing" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary btn-style sm-ltr-spacing" id="save-topic">Save changes</button>
           </div>
         </div>
       </div>

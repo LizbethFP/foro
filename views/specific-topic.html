@@ -19,22 +19,55 @@
     <title>Forum - Answers</title>
     </head>
     <body>
-    <!-- Todas las respuestas impresas -->
-    <section id="topic">
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">Cool Forum</a>
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navb">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link 1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link 3</a>
+                </li>
+              </ul>
+        
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" id="search">
+            </form>
+        
+          </nav>
+        
+        </header>
 
-    </section>
+        <!-- Todas las respuestas impresas -->
+        <section class="container-fluid">
+          <div class="row">
+            <div id="topic">
+              
+            </div>
+          </div>
 
-    <!-- Insertar respuestas -->
-    <div>
-      <input type="text" id="author" placeholder="author">
-      <input type="text" id="message" placeholder="text">
-      <button  id="post-answer">Answer</button>
-    </div>
+        </section>
 
-    <section class="respuestas" id="answer-div">
+        <!-- Insertar respuestas -->
+        <div>
+          <input type="text" id="author" placeholder="author">
+          <input type="text" id="message" placeholder="text">
+          <button class="btn-style" id="post-answer">Answer</button>
+        </div>
+
+        <section class="respuestas" id="answer-div">
 
 
-    </section>
+        </section>
 
      <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>

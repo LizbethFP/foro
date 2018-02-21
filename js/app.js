@@ -10,9 +10,19 @@ $(document).ready(function() {
       const author = topic.author_name;
       const answerCount = topic.responses_count;
 
-      $allTopicsContainer.append(`<h2><a href="views/specific-topic.html?topic_id=${id}">${existingTopic}</a></h2>
-          <h4 data-id=${id}>${author}</h4>
-          <p><span class=""> ${answerCount} respuestas</span></p>`);
+      $allTopicsContainer.append(`<div class="row mt-4">
+        <div class="col-6 offset-3 box-shadow">
+          <h2 class="col-2 offset-5 font-weight-bold bgr-ltr-spacing">
+            <a class="jade-ltr" href="views/specific-topic.html?topic_id=${id}">${existingTopic}</a>
+          </h2>
+          <p class="col-2 offset-5 mt-3 sm-ltr-spacing dark-ltr">By:
+              <span class="ml-2 sm-ltr-spacing dark-ltr" data-id=${id}>${author}</span>
+          </p>
+          <p class="col-2 offset-5 sm-ltr-spacing dark-ltr">Answers:
+                <span class="ml-2 sm-ltr-spacing dark-ltr">${answerCount}</span>
+          </p>
+        </div>
+      </div>`);
     });
   };
 
@@ -51,9 +61,21 @@ $(document).ready(function() {
       },
       function(data, status) {
         let firstChild = $allTopicsContainer.eq(0);
-        $(firstChild).prepend(`<h2><a href="views/specific-topic.html?topic_id=${data.id}">${data.content}</a></h2>
-                  <h4 data-id=${data.id}>${data.author_name}</h4>
-                  <p><span class=""> respuestas</span></p>`);
+        $(firstChild).prepend(`<div class="row mt-4">
+          <div class="col-6 offset-3 box-shadow">
+            <h2 class="col-2 offset-5 font-weight-bold bgr-ltr-spacing">
+              <a class="jade-ltr" href="views/specific-topic.html?topic_id=${data.id}">${data.content}</a>
+            </h2>
+            <p class="col-2 offset-5 mt-3 sm-ltr-spacing dark-ltr">By:
+                <span class="ml-2 sm-ltr-spacing dark-ltr" data-id=${data.id}>${data.author_name}</span>
+            </p>
+            <p class="col-2 offset-5 sm-ltr-spacing dark-ltr">Answers:
+                <span class="ml-2 sm-ltr-spacing dark-ltr"></span>
+            </p>
+          </div>
+        </div>`);
+
+
       });
     $('#exampleModal').modal('hide');
     $('#user-name').val('');

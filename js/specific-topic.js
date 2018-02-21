@@ -16,7 +16,7 @@ const getTopic = function() {
 const showTopic = function(topics) {
   const existingTopic = topics.content;
   const author = topics.author_name;
-  $('#topic').append(`<h2>${existingTopic}</h2>  <br>        <p>por:</p><h2>${author}</h2>`);
+  $('#topic').append(`<h2>${existingTopic}</h2>  <br>        <p>By:</p><h2>${author}</h2>`);
 };
 
 /* Obtener las respuestas del topic id encontrado */
@@ -36,7 +36,7 @@ const showSpecificAnswers = function(response) {
     response.forEach(function(resp) {
       const answerToTopic = resp.content;
       const answerAuthor = resp.author_name;
-      $('#answer-div').append(`<h2>${answerToTopic}</h2><br><p>por:</p><h2>${answerAuthor}</h2><hr>`);
+      $('#answer-div').append(`<h2>${answerToTopic}</h2><br><p>By:</p><h2>${answerAuthor}</h2><hr>`);
     });
   }
 };
