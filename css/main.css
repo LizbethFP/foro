@@ -8,6 +8,10 @@ header nav {
   background-color: #67F2F1!important;
 }
 
+footer {
+  background-color: #5CF1DE;
+}
+
 /* Helpers */
 .btn-style {
   color: #fff;
